@@ -1,7 +1,7 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2022 Sam Corbett All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Sam Corbett
+// Created on: Oct 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -18,6 +18,16 @@ if (navigator.serviceWorker) {
 /**
  * This function displays an alert.
  */
-function myButtonClicked() {
-  document.getElementById("volume").innerHTML = "<p>Hello, World!</p>"
+function calculateVOLUME() {
+  //input
+  const length = parseInt(document.getElementById("length-of-pyramid").value)
+  const width = parseInt(document.getElementById("width-of-pyramid").value)
+  const height = parseInt(document.getElementById("height-of-pyramid").value)
+
+  //process
+  const volume = (length * width * height) / 3
+
+  //output
+  document.getElementById("volume").innerHTML =
+    "The Volume For This Pyramid is: " + volume.toFixed(2) + "cm³"
 }
