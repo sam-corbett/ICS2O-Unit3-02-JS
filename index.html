@@ -4,13 +4,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My first PWA" />
+    <meta name="description" content="My Pyramid Calculator" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="sam-corbett" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>GitHub page as PWA template</title>
-    <link rel="canonical" href="https://sam-corbett/ICS2O-PWA-Test/" />
-    <link rel="manifest" href="/ICS2O-PWA-Test/manifest.webmanifest" />
+    <title>Pyramid Volume Calculator</title>
+    <link rel="canonical" href="https://sam-corbett/ICS2O-Unit3-02-JS/" />
+    <link rel="manifest" href="/ICS2O-Unit3-02-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
@@ -28,49 +28,104 @@
     </noscript>
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
+      href="https://code.getmdl.io/1.3.0/material.yellow-red.min.css"
       media="none"
       onload="if(media!='all')media='all'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
+        href="https://code.getmdl.io/1.3.0/material.yellow-red.min.css"
       />
     </noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>My first PWA</title>
+  <title>Pyramid Volume Calculator</title>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
+          <span class="mdl-layout-title">Pyramid Volume Calculator</span>
         </div>
       </header>
       <main class="mdl-layout__content">
         <p></p>
         <img
-          src="./images/notebook-animation.svg"
+          src="./images/pyramid-volume-diagram.svg"
           alt="Computer"
           width="25%"
           height="25%"
         />
-        <p></p>
+              <h6>Fomula: V = (l * w * h) / 3</h6>
+      <p>Enter The Following Inputs For Your Pyramid...</p>
+          <!-- Numeric Textfield -->
+        <form action="#">
+          Length:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="length-of-trapezoid"
+              aria-label="Length"
+            />
+            <label
+              class="mdl-textfield__label"
+              for="length-of-trapezoid"
+            ></label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+          <!-- Numeric Textfield -->
+        <form action="#">
+          Width:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="length-of-trapezoid"
+              aria-label="Length"
+            />
+            <label
+              class="mdl-textfield__label"
+              for="length-of-trapezoid"
+            ></label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+          <!-- Numeric Textfield -->
+        <form action="#">
+          Height:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="length-of-trapezoid"
+              aria-label="Length"
+            />
+            <label
+              class="mdl-textfield__label"
+              for="length-of-trapezoid"
+            ></label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="myButtonClicked()"
         >
-          Say "Hello, World!"
+          Calculate
         </button>
         <!-- basic text -->
         <p></p>
-        <div id="hello-world"></div>
+        <div id="volume"></div>
       </main>
     </div>
   </body>
